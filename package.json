@@ -18,5 +18,14 @@
   "dependencies": {
     "express": "^4.16.4",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zizuar/FriendFinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zizuar/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Zizuar/FriendFinder#readme"
 }
