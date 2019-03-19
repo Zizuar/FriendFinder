@@ -1,8 +1,7 @@
-[
 {
     "name" : "Ahmed 'No Longer Exists' Doe",
     "photo" : "https://i.giphy.com/media/KD0JQHYCaE4o0/giphy.webp",
-    "scores" : [
+   "scores" : [
         5,
         1,
         4,
@@ -15,4 +14,3 @@
         1
       ]
   }
-]

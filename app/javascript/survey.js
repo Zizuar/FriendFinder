@@ -1,3 +1,4 @@
+const modal = $("#MyModal").modal();
 $( document ).ready(function() {
     newSurvey();
     $('#submitButton').on('click', submit);
@@ -34,11 +35,11 @@ function masterSelect() {
 
 function newSurvey() {
   for (var i = 0; i < queryList.length; i++) {
-    var question = $('<div>').attr('id', 'question' + i);
+    var question = $('<div>').attr('id', 'questions' + i);
     question.append($('<h4>').html('Question ' + (i + 1)));
     question.append($('<p>').html(queryList[i]));
     var choices = newScores();
-    choices.attr('id', 'Answer' + i);
+    choices.attr('id', 'choice' + i);
     question.append(choices);
     question.append($('<br>'));
     question.append($('<br>'));
@@ -47,11 +48,11 @@ function newSurvey() {
 }
 
 function newScores() {
-  var selected = $('<select>');
+  var select = $('<select>');
   for (var i = 0; i < choices.length; i++) {
-    selected.append($('<answer>').val(i+1).text(choices[i]));
+    select.append($('<choice>').val(i+1).text(choices[i]));
   }
-  return selected;
+  return select;
 }
 
 function submit() {
@@ -75,7 +76,7 @@ function submit() {
 
   function answerLift() {
     for (var i = 0; i < queryList.length; i++) {
-      var answerList = '#Answer' + i;
+      var answerList = '#choice' + i;
       var answer = $(answerList).val();
       scores.push(answer);
     }

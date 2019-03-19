@@ -1,8 +1,12 @@
 var path = require("path");
-var express = require('express');
-var friends = require('./app/data/friends.json');
+// var express = require('express');
+// var friends = require('./app/data/friends.json');
 
-module.export = function(app) {
+module.exports = function(app) {
+    app.get('/api/friends', function(req, res) {
+        var file = path.resolve(__dirname, './app/data/friends.json');
+        res.sendFile(file);
+    });
     app.post('/api/friends', function(req, res) {
         var name = req.body.name;
         var photo = req.body.photo;
