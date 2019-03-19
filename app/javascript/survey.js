@@ -61,8 +61,8 @@ function submit() {
   var postData = dataPrep();
   $.post("/api/friends", postData,
   function(data, status){
-    $('#friendName').text(data.name);
-    $('#friendPhoto').attr('src', data.photo);
+    $('#bffName').text(data.name);
+    $('#bffPhoto').attr('src', data.photo);
   });
 
   function dataPrep() {
