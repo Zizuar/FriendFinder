@@ -56,7 +56,7 @@ function newScores() {
 
 function submit() {
   event.preventDefault();
-  var answers = [];
+  var scores = [];
   answerLift();
   var postData = dataPrep();
   $.post("/api/friends", postData,
@@ -67,9 +67,9 @@ function submit() {
 
   function dataPrep() {
     return {
-      answers: JSON.stringify(answers),
+      scores: JSON.stringify(answers),
       name: $('#name').val(),
-      profilePic: $('#profilePic').val()
+      photo: $('#photo').val()
     };
   }
 
@@ -77,7 +77,7 @@ function submit() {
     for (var i = 0; i < queryList.length; i++) {
       var answerList = '#Answer' + i;
       var answer = $(answerList).val();
-      answers.push(answer);
+      scores.push(answer);
     }
   }
 }
