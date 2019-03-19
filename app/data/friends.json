@@ -1,5 +1,4 @@
-// Objects for friend data
-var surveyMonkies =[
+[
 {
     "name" : "Ahmed 'No Longer Exists' Doe",
     "photo" : "https://i.giphy.com/media/KD0JQHYCaE4o0/giphy.webp",
@@ -16,4 +15,4 @@ var surveyMonkies =[
         1
       ]
   }
-];
+]

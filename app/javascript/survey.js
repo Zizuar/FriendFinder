@@ -57,19 +57,27 @@ function newScores() {
 function submit() {
   event.preventDefault();
   var answers = [];
-  for (var i = 0; i < queryList.length; i++) {
-    let answerList = '#Answer' + i;
-    let answer = $(answerList).val();
-    answers.push(answer);
-  }
-  let postData = {
-    answers: JSON.stringify(answers),
-    name: $('#name').val(),
-    profilePic: $('#profilePic').val()
-  };
+  answerLift();
+  var postData = dataPrep();
   $.post("/api/friends", postData,
   function(data, status){
     $('#friendName').text(data.name);
     $('#friendPhoto').attr('src', data.photo);
   });
+
+  function dataPrep() {
+    return {
+      answers: JSON.stringify(answers),
+      name: $('#name').val(),
+      profilePic: $('#profilePic').val()
+    };
+  }
+
+  function answerLift() {
+    for (var i = 0; i < queryList.length; i++) {
+      var answerList = '#Answer' + i;
+      var answer = $(answerList).val();
+      answers.push(answer);
+    }
+  }
 }
