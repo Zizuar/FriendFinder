@@ -16,24 +16,40 @@
     <div class="jumbotron">
       <h1 class="text-center"><span class="fa fa-fire"></span>Friend Finder Survey Temporary Page</h1>
       <hr>
-      <h2 class="text-center">Main Survey Page Coming Shortly</h2>
-      <br>
-
-      <div class="text-center">
-        <!-- <a href="/tables"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> View Tables</button></a>
-        <a href="/reserve"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make Reservation</button></a> -->
-      </div>
-
+      <h2 class="text-center">Friendly Questionaire</h2>
     </div>
-
-    <footer class="footer">
-      <div class="container">
-        <!-- <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> -->
+    <div>
+      <h2>Hey.. Who's dat? Tell me about you..</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name">
       </div>
-    </footer>
-
+      <div class="form-group">
+        <label for="profilePhoto">Link To Profile Photo:</label>
+        <input type="text" class="form-control" id="profilePhoto">
+      </div>
+    </div>
+    <div id="queryList"></div>
+    <button type="button" class="btn btn-lg" value="Submit" data-toggle="modal" data-target="#myModal" id="submitButton">Submit</button>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h1>Your Bestie</h1>
+            <span id='bestie'></span>
+            <div class="mb-3">
+              <img class="img-fluid" id="bffPhoto">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
+  <script src="./javascript/survey.js"></script>
 
 </body>
+
 </html>
