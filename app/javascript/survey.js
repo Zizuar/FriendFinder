@@ -1,4 +1,4 @@
-const modal = $("#MyModal").modal();
+// const modal = $("#MyModal").modal();
 $( document ).ready(function() {
     newSurvey();
     $('#submitButton').on('click', submit);
@@ -39,7 +39,7 @@ function newSurvey() {
     question.append($('<h4>').html('Question ' + (i + 1)));
     question.append($('<p>').html(queryList[i]));
     var choices = newScores();
-    choices.attr('id', 'choice' + i);
+    choices.attr('id', 'choices' + i);
     question.append(choices);
     question.append($('<br>'));
     question.append($('<br>'));
@@ -50,7 +50,7 @@ function newSurvey() {
 function newScores() {
   var select = $('<select>');
   for (var i = 0; i < choices.length; i++) {
-    select.append($('<choice>').val(i+1).text(choices[i]));
+    select.append($('<option>').val(i+1).text(choices[i]));
   }
   return select;
 }
