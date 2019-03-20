@@ -60,15 +60,15 @@ function submit() {
   var scores = [];
   answerLift();
   var postData = dataPrep();
-  $.post("/api/friends", postData,
-  function(data, status){
+  $.post("./api/friends", postData,
+  function(data){
     $('#bffName').text(data.name);
     $('#bffPhoto').attr('src', data.photo);
   });
 
   function dataPrep() {
     return {
-      scores: JSON.stringify(answers),
+      scores: JSON.stringify(answerList),
       name: $('#name').val(),
       photo: $('#photo').val()
     };
