@@ -1,4 +1,4 @@
-// const modal = $("#MyModal").modal();
+const modal = $("#MyModal").modal();
 $( document ).ready(function() {
     newSurvey();
     $('#submitButton').on('click', submit);
